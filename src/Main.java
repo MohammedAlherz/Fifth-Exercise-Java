@@ -91,7 +91,7 @@ public class Main {
         String alphaRegex = ".*[a-z].*";
         String alphaRegexCap = ".*[A-Z].*";
 
-        if (pass.matches(numRegex) && (pass.matches(alphaRegex) || pass.matches(alphaRegexCap))) {
+        if ((pass.length() >=8) && (pass.matches(numRegex) && (pass.matches(alphaRegex) || pass.matches(alphaRegexCap)))) {
             msg = "Password is Valid " + pass;
         } else {
             msg = "Password is not Valid " + pass;
